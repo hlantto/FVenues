@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@import CoreLocation;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *textFieldSearch;
+- (IBAction)keywordChanged:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

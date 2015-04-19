@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface FVenuesTests : XCTestCase
+#import "ViewController.h"
+#import "AppDelegate.h"
 
+
+@interface FVenuesTests : XCTestCase {
+@private
+    UIApplication   *app;
+    AppDelegate     *appDelegate;
+    ViewController  *fViewController;
+    UIView          *fView;
+}
 @end
 
 @implementation FVenuesTests
@@ -18,6 +27,11 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    app             = [UIApplication sharedApplication];
+    appDelegate     = [app delegate];
+    fViewController = (ViewController*)appDelegate.window.rootViewController;
+    fView           = fViewController.view;
 }
 
 - (void)tearDown {
@@ -25,7 +39,29 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)DISABLED_testLocationDenied {
+    // deny location services
+    //CLLocationManager *authorizationStatus = kCLAuthorizationStatusDenied;
+    fViewController.textFieldSearch.text = @"oulu";
+    XCTAssert(YES, @"Pass");
+}
+
+- (void)DISABLED_testNoNetwork {
+    // This is an example of a functional test case.
+    XCTAssert(YES, @"Pass");
+}
+
+- (void)DISABLED_testQueryTimeout {
+    // This is an example of a functional test case.
+    XCTAssert(YES, @"Pass");
+}
+
+- (void)testOkSearch {
+    // This is an example of a functional test case.
+    XCTAssert(YES, @"Pass");
+}
+
+- (void)testFiveSimultaneousSearches {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
 }

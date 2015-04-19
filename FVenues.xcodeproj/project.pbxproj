@@ -14,6 +14,9 @@
 		F44E78A51AE127C2000F1379 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44E78A41AE127C2000F1379 /* Images.xcassets */; };
 		F44E78A81AE127C2000F1379 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44E78A61AE127C2000F1379 /* LaunchScreen.xib */; };
 		F44E78B41AE127C2000F1379 /* FVenuesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F44E78B31AE127C2000F1379 /* FVenuesTests.m */; };
+		F44E78BF1AE13B55000F1379 /* venueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F44E78BE1AE13B55000F1379 /* venueCell.m */; };
+		F44E78C11AE1405D000F1379 /* venueData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44E78C01AE1405D000F1379 /* venueData.m */; };
+		F44E78C71AE157D6000F1379 /* fourSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F44E78C61AE157D6000F1379 /* fourSHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		F44E78AD1AE127C2000F1379 /* FVenuesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FVenuesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44E78B21AE127C2000F1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F44E78B31AE127C2000F1379 /* FVenuesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FVenuesTests.m; sourceTree = "<group>"; };
+		F44E78BD1AE13B55000F1379 /* venueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = venueCell.h; sourceTree = "<group>"; };
+		F44E78BE1AE13B55000F1379 /* venueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = venueCell.m; sourceTree = "<group>"; };
+		F44E78C01AE1405D000F1379 /* venueData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = venueData.m; sourceTree = "<group>"; };
+		F44E78C21AE14099000F1379 /* venueData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = venueData.h; sourceTree = "<group>"; };
+		F44E78C61AE157D6000F1379 /* fourSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourSHelper.m; sourceTree = "<group>"; };
+		F44E78C81AE15811000F1379 /* fourSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fourSHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,12 @@
 				F44E78A41AE127C2000F1379 /* Images.xcassets */,
 				F44E78A61AE127C2000F1379 /* LaunchScreen.xib */,
 				F44E78971AE127C2000F1379 /* Supporting Files */,
+				F44E78BD1AE13B55000F1379 /* venueCell.h */,
+				F44E78BE1AE13B55000F1379 /* venueCell.m */,
+				F44E78C01AE1405D000F1379 /* venueData.m */,
+				F44E78C21AE14099000F1379 /* venueData.h */,
+				F44E78C61AE157D6000F1379 /* fourSHelper.m */,
+				F44E78C81AE15811000F1379 /* fourSHelper.h */,
 			);
 			path = FVenues;
 			sourceTree = "<group>";
@@ -219,7 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44E78C11AE1405D000F1379 /* venueData.m in Sources */,
+				F44E78C71AE157D6000F1379 /* fourSHelper.m in Sources */,
 				F44E78A01AE127C2000F1379 /* ViewController.m in Sources */,
+				F44E78BF1AE13B55000F1379 /* venueCell.m in Sources */,
 				F44E789D1AE127C2000F1379 /* AppDelegate.m in Sources */,
 				F44E789A1AE127C2000F1379 /* main.m in Sources */,
 			);

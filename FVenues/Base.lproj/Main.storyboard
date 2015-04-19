@@ -1,25 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type the venue name" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="68O-Wg-KEa" userLabel="Search">
+                                <rect key="frame" x="16" y="28" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="keywordChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="DPd-5n-m7a"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="6n7-9z-czC"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-OZ-deh">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="venueCell" rowHeight="80" id="h8y-dc-3Q8" customClass="venueCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h8y-dc-3Q8" id="w7Y-uz-d8j">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VenueName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAz-ZU-rrs" userLabel="VenueName">
+                                                    <rect key="frame" x="17" y="8" width="83" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q9-bQ-ufP">
+                                                    <rect key="frame" x="30" y="55" width="53" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FJ-Vg-ho4">
+                                                    <rect key="frame" x="30" y="32" width="50" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6FJ-Vg-ho4" firstAttribute="leading" secondItem="aAz-ZU-rrs" secondAttribute="leading" constant="13" id="Etd-3V-wzE"/>
+                                                <constraint firstItem="9Q9-bQ-ufP" firstAttribute="leading" secondItem="6FJ-Vg-ho4" secondAttribute="leading" id="SDY-XB-E0L"/>
+                                                <constraint firstItem="9Q9-bQ-ufP" firstAttribute="top" secondItem="6FJ-Vg-ho4" secondAttribute="bottom" constant="7" id="ZQt-4b-aR5"/>
+                                                <constraint firstItem="aAz-ZU-rrs" firstAttribute="top" secondItem="w7Y-uz-d8j" secondAttribute="top" constant="8" id="bNo-df-CsQ"/>
+                                                <constraint firstItem="aAz-ZU-rrs" firstAttribute="leading" secondItem="w7Y-uz-d8j" secondAttribute="leading" constant="17" id="ciG-4s-xrF"/>
+                                                <constraint firstItem="6FJ-Vg-ho4" firstAttribute="top" secondItem="aAz-ZU-rrs" secondAttribute="bottom" constant="6" id="geu-z7-pDE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="venueAddress" destination="6FJ-Vg-ho4" id="PZH-GL-67I"/>
+                                            <outlet property="venueDistance" destination="9Q9-bQ-ufP" id="sx7-2n-rcS"/>
+                                            <outlet property="venueName" destination="aAz-ZU-rrs" id="s36-Or-zfP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="IZh-Dx-bR1"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="dJC-5G-DkU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="68O-Wg-KEa" secondAttribute="trailing" constant="16" id="8f6-Cm-fC4"/>
+                            <constraint firstItem="68O-Wg-KEa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Cqm-u5-Vy8"/>
+                            <constraint firstItem="68O-Wg-KEa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="IkO-6z-e0Q"/>
+                            <constraint firstItem="kHC-OZ-deh" firstAttribute="top" secondItem="68O-Wg-KEa" secondAttribute="bottom" constant="14" id="XWv-iw-jKF"/>
+                            <constraint firstAttribute="centerX" secondItem="kHC-OZ-deh" secondAttribute="centerX" id="jyg-qO-qn5"/>
+                            <constraint firstItem="kHC-OZ-deh" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="nrL-Lc-wGn"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kHC-OZ-deh" secondAttribute="bottom" id="xqn-2P-sBr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="kHC-OZ-deh" id="NWZ-fs-QM3"/>
+                        <outlet property="textFieldSearch" destination="68O-Wg-KEa" id="UAC-Z9-HCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="406"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
